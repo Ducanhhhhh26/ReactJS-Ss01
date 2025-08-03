@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>const a = 5;
+    const arr = [1, 2, 3];
+
+    a = 10; // Thử thay đổi giá trị biến số nguyên
+    arr.push(4); // Thêm phần tử mới vào mảng
+
+    console.log(a);    // Lỗi: Assignment to constant variable.
+    console.log(arr);  // Kết quả: [1, 2, 3, 4]
+    // Việc gán lại giá trị cho biến số nguyên a sẽ gây lỗi vì const không cho phép thay đổi giá trị tham chiếu của biến nguyên thủy.
+    // Việc thêm phần tử vào mảng arr không gây lỗi vì const chỉ ngăn không cho gán lại biến arr sang một mảng khác, còn các thao tác thay đổi nội dung bên trong mảng (push, pop, ...) vẫn được phép.
+    </script>
+
+</body>
+</html>

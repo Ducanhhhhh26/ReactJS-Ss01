@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Khai báo đối tượng response chứa dữ liệu
+        const response = {
+            data: {
+                id: 1,
+                title: "Destructuring in JavaScript",
+                author: {
+                    name: "Dev",
+                    email: "Dev@gmail.com",
+                },
+            },
+        };
+        // Sử dụng destructuring để lấy title và author từ response.data
+        const { title, author } = response.data;
+        // Sử dụng destructuring để lấy name và email từ author, gán vào biến authorName và authorEmail
+        const { name: authorName, email: authorEmail } = author;
+        // In ra các biến đã lấy được
+        console.log(title);
+        console.log(author);
+        console.log(authorName);
+        console.log(authorEmail);
+    </script>
+</body>
+</html>

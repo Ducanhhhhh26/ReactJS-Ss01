@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       
+        // Hàm sử dụng default parameter cho age và role
+        function createUser(name, age = 18, role = "user") {
+            return {
+                name,
+                age,
+                role
+            };
+        }
+        // Ví dụ sử dụng:
+        console.log(createUser("An")); // age=18, role="user"
+        console.log(createUser("Bình", 25)); // age=25, role="user"
+        console.log(createUser("Cường", 30, "admin")); // age=30, role="admin"
+    </script>
+</body>
+</html>

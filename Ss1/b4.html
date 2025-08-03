@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function checkEvenOdd(num) {
+            if (typeof num !== 'number' || isNaN(num)) {
+                return 'Không phải số';
+            }
+            if (num % 2 === 0) {
+                return `${num} là số chẵn`;
+            } else {
+                return `${num} là số lẻ`;
+            }
+        }
+        // Ví dụ sử dụng:
+        console.log(checkEvenOdd(4)); // 4 là số chẵn
+        console.log(checkEvenOdd(7)); // 7 là số lẻ
+        console.log(checkEvenOdd('abc')); // Không phải số
+    </script>
+</body>
+</html>

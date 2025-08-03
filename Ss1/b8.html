@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Hàm chèn mảng arr2 vào arr1 tại vị trí index
+        function insertArrayAt(arr1, arr2, index) {
+            if (index < 0 || index > arr1.length) {
+                console.log("Vị trí chèn không hợp lệ!");
+                return arr1;
+            }
+            // Sử dụng spread để chèn arr2 vào arr1 tại vị trí index
+            return [
+                ...arr1.slice(0, index),
+                ...arr2,
+                ...arr1.slice(index)
+            ];
+        }
+        // Ví dụ sử dụng:
+        const a = [1, 2, 3, 4];
+        const b = [9, 8];
+        console.log(insertArrayAt(a, b, 2)); // [1, 2, 9, 8, 3, 4]
+        console.log(insertArrayAt(a, b, 10)); // Vị trí chèn không hợp lệ!
+    </script>
+</body>
+</html>

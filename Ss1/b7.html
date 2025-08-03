@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Hàm nhận số lượng mảng không xác định, trả về mảng chứa tổng các phần tử của từng mảng
+        function sumArrays(...arrays) {
+            return arrays.map(arr => arr.reduce((sum, num) => sum + num, 0));
+        }
+        // Ví dụ sử dụng:
+        console.log(sumArrays([1,2,3], [4,5], [6,7,8,9])); // [6, 9, 30]
+    </script>
+</body>
+</html>
