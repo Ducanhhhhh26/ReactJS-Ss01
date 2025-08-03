@@ -7,13 +7,13 @@
 </head>
 <body>
     <script>
-        // Hàm chèn mảng arr2 vào arr1 tại vị trí index
+  
         function insertArrayAt(arr1, arr2, index) {
             if (index < 0 || index > arr1.length) {
                 console.log("Vị trí chèn không hợp lệ!");
                 return arr1;
             }
-            // Sử dụng spread để chèn arr2 vào arr1 tại vị trí index
+            
             return [
                 ...arr1.slice(0, index),
                 ...arr2,

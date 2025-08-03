@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Khởi tạo mảng các chuỗi bất kỳ
+        const arr = ["eat", "tea", "tan", "ate", "nat", "bat"];
+        // Hàm nhóm các chuỗi có ký tự giống nhau (anagram)
+        function groupAnagrams(strings) {
+            const map = {};
+            strings.forEach(str => {
+                const key = str.split('').sort().join('');
+                if (!map[key]) {
+                    map[key] = [];
+                }
+                map[key].push(str);
+            });
+          
+            return Object.values(map);
+        }
+        // Kết quả
+        const result = groupAnagrams(arr);
+        console.log(result);
+    </script>
+</body>
+</html>
